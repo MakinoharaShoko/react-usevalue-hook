@@ -11,13 +11,16 @@ export function useValue<T>(initialState: T) {
   };
 }
 
-export function uv<T>(initialState: T) {
-  const [v, setV] = useState<T>(initialState);
+export function uv<T>(initialValue: T) {
+  const [value, setValue] = useState<T>(initialValue);
+  const valueObject = {value};
   return {
-    v,
-    s: function (v: T) {
-      this.v = v;
-      setV(v);
-    }
+    set v(newValue: T) {
+      valueObject.value = newValue;
+      setValue(newValue);
+    },
+    get v(): T {
+      return valueObject.value;
+    },
   };
 }

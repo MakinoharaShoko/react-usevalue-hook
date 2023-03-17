@@ -12,14 +12,17 @@ function useValue(initialState) {
         }
     };
 }
-function uv(initialState) {
-    const [v, setV] = react.useState(initialState);
+function uv(initialValue) {
+    const [value, setValue] = react.useState(initialValue);
+    const valueObject = { value };
     return {
-        v,
-        s: function (v) {
-            this.v = v;
-            setV(v);
-        }
+        set v(newValue) {
+            valueObject.value = newValue;
+            setValue(newValue);
+        },
+        get v() {
+            return valueObject.value;
+        },
     };
 }
 
