@@ -1,0 +1,11 @@
+*.md
+*.css
+*.scss
+*.otf
+*.svg
+*.ttf
+*.ico
+
+build
+*.js.map
+*.js
