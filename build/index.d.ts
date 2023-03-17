@@ -1,6 +1,5 @@
 export declare function useValue<T>(initialState: T): {
-    value: any;
-    set: (newValue: T) => void;
+    v: T;
 };
 export declare function uv<T>(initialValue: T): {
     v: T;

@@ -4,24 +4,27 @@ var react = require('react');
 
 function useValue(initialState) {
     const [value, setValue] = react.useState(initialState);
+    const valueRef = react.useRef(value);
     return {
-        value,
-        set: function (newValue) {
-            this.value = newValue;
+        set v(newValue) {
+            valueRef.current = newValue;
             setValue(newValue);
-        }
+        },
+        get v() {
+            return valueRef.current;
+        },
     };
 }
 function uv(initialValue) {
     const [value, setValue] = react.useState(initialValue);
-    const valueObject = { value };
+    const valueRef = react.useRef(value);
     return {
         set v(newValue) {
-            valueObject.value = newValue;
+            valueRef.current = newValue;
             setValue(newValue);
         },
         get v() {
-            return valueObject.value;
+            return valueRef.current;
         },
     };
 }

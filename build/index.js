@@ -1,25 +1,28 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function useValue(initialState) {
     const [value, setValue] = useState(initialState);
+    const valueRef = useRef(value);
     return {
-        value,
-        set: function (newValue) {
-            this.value = newValue;
+        set v(newValue) {
+            valueRef.current = newValue;
             setValue(newValue);
-        }
+        },
+        get v() {
+            return valueRef.current;
+        },
     };
 }
 function uv(initialValue) {
     const [value, setValue] = useState(initialValue);
-    const valueObject = { value };
+    const valueRef = useRef(value);
     return {
         set v(newValue) {
-            valueObject.value = newValue;
+            valueRef.current = newValue;
             setValue(newValue);
         },
         get v() {
-            return valueObject.value;
+            return valueRef.current;
         },
     };
 }
