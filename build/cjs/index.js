@@ -6,11 +6,11 @@ function useValue(initialState) {
     const [value, setValue] = react.useState(initialState);
     const valueRef = react.useRef(value);
     return {
-        set v(newValue) {
+        set value(newValue) {
             valueRef.current = newValue;
             setValue(newValue);
         },
-        get v() {
+        get value() {
             return valueRef.current;
         },
     };

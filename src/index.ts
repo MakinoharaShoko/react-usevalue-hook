@@ -5,11 +5,11 @@ export function useValue<T>(initialState: T) {
   const valueRef = useRef<T>(value);
 
   return {
-    set v(newValue: T) {
+    set value(newValue: T) {
       valueRef.current = newValue;
       setValue(newValue);
     },
-    get v(): T {
+    get value(): T {
       return valueRef.current;
     },
   };

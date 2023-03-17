@@ -1,6 +1,6 @@
 {
   "name": "react-usevalue-hook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React use sync value.",
   "main": "./build/cjs/index.js",
   "scripts": {

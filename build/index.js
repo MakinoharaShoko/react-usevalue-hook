@@ -4,11 +4,11 @@ function useValue(initialState) {
     const [value, setValue] = useState(initialState);
     const valueRef = useRef(value);
     return {
-        set v(newValue) {
+        set value(newValue) {
             valueRef.current = newValue;
             setValue(newValue);
         },
-        get v() {
+        get value() {
             return valueRef.current;
         },
     };
