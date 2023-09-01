@@ -67,7 +67,7 @@ function useValueWithKey(initialState, key) {
             setValue(newValue);
         },
         get value() {
-            return mkv.get(key);
+            return mkv.get(key) ?? initialState;
         },
     };
 }
@@ -91,7 +91,7 @@ function uVK(initialState, key) {
             setValue(newValue);
         },
         get v() {
-            return mkv.get(key);
+            return mkv.get(key) ?? initialState;
         },
     };
 }

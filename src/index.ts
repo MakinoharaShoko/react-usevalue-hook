@@ -74,7 +74,7 @@ export function useValueWithKey<T>(initialState: T, key: string) {
       setValue(newValue);
     },
     get value(): T {
-      return mkv.get(key);
+      return mkv.get(key) ?? initialState;
     },
   };
 }
