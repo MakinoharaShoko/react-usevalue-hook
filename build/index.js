@@ -56,6 +56,7 @@ function useValueWithKey(initialState, key) {
             setValue(mkv.get(key));
         };
         eb.on(`__CHANGED__${key}`, handleChange);
+        handleChange();
         return () => {
             eb.off(`__CHANGED__${key}`, handleChange);
         };
@@ -80,6 +81,7 @@ function uVK(initialState, key) {
             setValue(mkv.get(key));
         };
         eb.on(`__CHANGED__${key}`, handleChange);
+        handleChange();
         return () => {
             eb.off(`__CHANGED__${key}`, handleChange);
         };
