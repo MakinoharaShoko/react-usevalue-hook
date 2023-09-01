@@ -1,6 +1,6 @@
 {
   "name": "react-usevalue-hook",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "React use sync value.",
   "main": "./build/cjs/index.js",
   "scripts": {
@@ -41,6 +41,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
+    "mitt": "^3.0.1",
     "react": "^18.2.0"
   },
   "lint-staged": {
