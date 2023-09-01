@@ -51,7 +51,7 @@ function useValueWithKey(initialState, key) {
     const [_, setValue] = useState(initialState);
     useEffect(() => {
         // init value(if not set by another component)
-        mkv.set(key, initialState);
+        mkv.init(key, initialState);
         const handleChange = () => {
             setValue(mkv.get(key));
         };
@@ -76,7 +76,7 @@ function uVK(initialState, key) {
     const [_, setValue] = useState(initialState);
     useEffect(() => {
         // init value(if not set by another component)
-        mkv.set(key, initialState);
+        mkv.init(key, initialState);
         const handleChange = () => {
             setValue(mkv.get(key));
         };
