@@ -1,4 +1,4 @@
-# react-use-value
+# react-usevalue-hook
 一个同步的、可作为全局状态管理的，useState 的替代
 
 ```shell
