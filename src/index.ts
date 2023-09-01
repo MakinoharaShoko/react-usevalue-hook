@@ -62,7 +62,9 @@ export function useValueWithKey<T>(initialState: T, key: string) {
       setValue(mkv.get(key));
     };
     eb.on(`__CHANGED__${key}`, handleChange);
-    handleChange();
+    if (initialState !== mkv.get(key)) {
+      handleChange();
+    }
     return () => {
       eb.off(`__CHANGED__${key}`, handleChange);
     };
@@ -90,7 +92,9 @@ export function uVK<T>(initialState: T, key: string) {
       setValue(mkv.get(key));
     };
     eb.on(`__CHANGED__${key}`, handleChange);
-    handleChange();
+    if (initialState !== mkv.get(key)) {
+      handleChange();
+    }
     return () => {
       eb.off(`__CHANGED__${key}`, handleChange);
     };

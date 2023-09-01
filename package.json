@@ -1,8 +1,9 @@
 {
   "name": "react-usevalue-hook",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "React use sync value.",
   "main": "./build/cjs/index.js",
+  "repository": "https://github.com/MakinoharaShoko/react-use-value",
   "scripts": {
     "build": "rimraf -rf ./build && rollup --config",
     "lint": "eslint src/** --fix",
