@@ -101,7 +101,7 @@ export function uVK<T>(initialState: T, key: string) {
       setValue(newValue);
     },
     get v(): T {
-      return mkv.get(key);
+      return mkv.get(key) ?? initialState;
     },
   };
 }
