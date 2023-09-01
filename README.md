@@ -1,6 +1,8 @@
 # react-usevalue-hook
 一个同步的、可作为全局状态管理的，useState 的替代
 
+## 我是一个懒人，所以我想要用最少的代码使用一个全局状态，同时它的实现也要用很少的代码:P
+
 ```shell
 yarn add react-usevalue-hook
 # or npm install react-usevalue-hook --save
